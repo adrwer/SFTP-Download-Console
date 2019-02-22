@@ -18,15 +18,15 @@ namespace SFTP_Download_Console
     {
         static void Main(string[] args)
         {
-            string host = @"ftp.watersmartsoftware.com";
-            string username = @"nweldgate";
+            string host = @"ftp.example.com";
+            string username = @"...";
 
-            string remoteDirectory = @"/downloads/";
-            string localDirectory = @"C:\Rawfiles-WSmartEnrolement\";
+            string remoteDirectory = @"/.../";
+            string localDirectory = @"C:\...\";
 
             //var GetDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-            PrivateKeyFile keyFile = new PrivateKeyFile(localDirectory + @"\nweld_rsa_key.ppk"); //Had to convert the ppk file I downloaded to OpenSSH format for compatibility with SSH.NET
+            PrivateKeyFile keyFile = new PrivateKeyFile(localDirectory + @"...\key.ppk"); //Had to convert the ppk file I downloaded to OpenSSH format for compatibility with SSH.NET
             var keyFiles = new[] { keyFile };
 
             var methods = new List<AuthenticationMethod>();
